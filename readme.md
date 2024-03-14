@@ -10,6 +10,8 @@ Write a Python program to generate the Fibonacci sequence up to a specified term
 
 ## 2. Python Conditional Statements
 
+Example code   is [here](https://admin.powerlearnproject.org/course-module/62fbec9d28ac4762bc524f92/week/62fe1efd28ac4762bc524f9c/lesson/62fe1fbd28ac4762bc524f9f)
+
 #### Create a Python program that:
 
 - Prompts a user to enter their `age`.
