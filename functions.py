@@ -14,12 +14,16 @@ def fibonacci(n):
   """
   if n <= 1:
     # Complete here
+    return[0]
+  
   else:
-    a, b = # complete here
+    a, b = 0,1 #complete here
+    fibonacci_sequence = [a,b]
     for _ in range(2, n + 1):
       c = a + b
+      fibonacci_sequence.append(c)
       # Complete here
-    return # add the variable to be returned
+    return fibonacci_sequence# add the variable to be returned
 
 # Get the number of terms from the user
 num_terms = int(input("Enter the number of terms: "))
