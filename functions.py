@@ -1,36 +1,36 @@
-# Functions & Fibonacci Sequence
-# Question
-# Write a Python program to generate the Fibonacci sequence up to a specified term n. The Fibonacci sequence starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.
-#We have provided  you with in-complete code, from the Knowledge learned from week 1 to week 3 please complete the missing parts to achieve the goal of the question.
-def fibonacci(n):
-  """
-  This function generates the Fibonacci sequence up to a specified term n using iteration.
+# # Functions & Fibonacci Sequence
+# # Question
+# # Write a Python program to generate the Fibonacci sequence up to a specified term n. The Fibonacci sequence starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.
+# #We have provided  you with in-complete code, from the Knowledge learned from week 1 to week 3 please complete the missing parts to achieve the goal of the question.
+# def fibonacci(n):
+#   """
+#   This function generates the Fibonacci sequence up to a specified term n using iteration.
 
-  Args:
-      n: The number of terms in the Fibonacci sequence.
+#   Args:
+#       n: The number of terms in the Fibonacci sequence.
 
-  Returns:
-      A list containing the Fibonacci sequence up to n terms.
-  """
-  if n <= 1:
-    # Complete here
-  else:
-    a, b = # complete here
-    for _ in range(2, n + 1):
-      c = a + b
-      # Complete here
-    return # add the variable to be returned
+#   Returns:
+#       A list containing the Fibonacci sequence up to n terms.
+#   """
+#   if n <= 1:
+#     # Complete here
+#   else:
+#     a, b = 0, 1
+#     for a in range(2, n + 1):
+#       c = a + b
+#       # Complete here
+#     return c # add the variable to be returned
 
-# Get the number of terms from the user
-num_terms = int(input("Enter the number of terms: "))
+# # Get the number of terms from the user
+# num_terms = int(input("Enter the number of terms: "))
 
-# Generate the Fibonacci sequence
-fibonacci_sequence = []
-for i in range(num_terms):
-  fibonacci_sequence.append(fibonacci(i))
+# # Generate the Fibonacci sequence
+# fibonacci_sequence = []
+# for i in range(num_terms):
+#   fibonacci_sequence.append(fibonacci(i))
 
-# Print the Fibonacci sequence
-print(fibonacci_sequence)
+# # Print the Fibonacci sequence
+# print(fibonacci_sequence)
 
 
 # Your program should:
@@ -39,3 +39,37 @@ print(fibonacci_sequence)
 # Create a function that takes n as a parameter and returns a list containing the first n terms of the Fibonacci sequence.
 # Print the generated Fibonacci sequence.
 
+
+
+def fibonacci(n):
+    """
+    This function generates the Fibonacci sequence up to a specified term n using iteration.
+
+    Args:
+        n: The number of terms in the Fibonacci sequence.
+
+    Returns:
+        A list containing the Fibonacci sequence up to n terms.
+    """
+    fibonacci_sequence = [] 
+    if n <= 0:
+        return fibonacci_sequence  
+    elif n == 1:
+        fibonacci_sequence.append(0)  
+    else:
+        fibonacci_sequence.extend([0, 1])  # If n is greater than 1, add the first two terms (0 and 1) to the sequence
+        a, b = 0, 1  
+        for _ in range(2, n):
+            c = a + b  
+            fibonacci_sequence.append(c)  
+            a, b = b, c  
+    return fibonacci_sequence
+
+# Get the number of terms from the user
+num_terms = int(input("Enter the number of terms: "))
+
+# Generate the Fibonacci sequence
+fibonacci_sequence = fibonacci(num_terms)
+
+# Print the Fibonacci sequence
+print(fibonacci_sequence)
