@@ -5,7 +5,7 @@
 def fibonacci(n):
   """
   This function generates the Fibonacci sequence up to a specified term n using iteration.
-
+   
   Args:
       n: The number of terms in the Fibonacci sequence.
 
@@ -13,23 +13,26 @@ def fibonacci(n):
       A list containing the Fibonacci sequence up to n terms.
   """
   if n <= 1:
-    # Complete here
+     # Base case: The first two terms are 0 and 1
+    return [0, 1][:n]  # Create a list of n zeros for the first n terms
+
   else:
-    a, b = # complete here
-    for _ in range(2, n + 1):
+    a, b = 0, 1  # Initialize the first two numbers (0 and 1)
+    fibonacci_sequence = [0, 1]
+    for _ in range(2, n):
       c = a + b
-      # Complete here
-    return # add the variable to be returned
+      fibonacci_sequence.append(c)
+      a, b = b, c
+    return fibonacci_sequence
 
 # Get the number of terms from the user
 num_terms = int(input("Enter the number of terms: "))
 
 # Generate the Fibonacci sequence
-fibonacci_sequence = []
-for i in range(num_terms):
-  fibonacci_sequence.append(fibonacci(i))
+fibonacci_sequence = fibonacci(num_terms)
 
 # Print the Fibonacci sequence
+print("Fibonacci Sequence up to term", num_terms, ":")
 print(fibonacci_sequence)
 
 
