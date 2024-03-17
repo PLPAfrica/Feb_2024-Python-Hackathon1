@@ -1,19 +1,44 @@
-## 1. Functions & Fibonacci Sequence
+# Fibonacci Sequence and Age Validation
 
-Write a Python program to generate the Fibonacci sequence up to a specified term n. The Fibonacci sequence starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.
+This repository contains Python programs to generate the Fibonacci sequence up to a specified term and to validate age input for voting eligibility.
 
-#### Your program should:
+## Fibonacci Sequence
 
-- Ask the user to input the value of `n`.
-- Create a function that takes n as a `parameter` and `returns` a list containing the first `n` terms of the Fibonacci sequence.
-- Print the `generated` Fibonacci sequence.
+The `functions.py` file contains a Python program to generate the Fibonacci sequence up to a specified term.
 
-## 2. Python Conditional Statements
+### How to Run
 
-Example code   is [here](https://plpacademy.powerlearnproject.org/course-module/62fbec9d28ac4762bc524f92/week/62fe1efd28ac4762bc524f9c/lesson/62fe1fbd28ac4762bc524f9f)
+To run the Fibonacci sequence program, follow these steps:
 
-#### Create a Python program that:
+1. Open a terminal.
+2. Navigate to the directory containing the `functions.py` file.
+3. Run the following command:
 
-- Prompts a user to enter their `age`.
-- Uses a conditional statement to check if the `age` is `greater than` or `equal to` 18.
-- Prints `You are eligible to vote` if true, otherwise `You are not eligible to vote`
+   ```
+   python3 functions.py
+   ```
+
+4. Enter the number of terms for the Fibonacci sequence when prompted.
+5. The program will generate and print the Fibonacci sequence based on the provided input.
+
+## Age Validation for Voting Eligibility
+
+The `conditions.py` file contains a Python program to validate age input for voting eligibility.
+
+### How to Run
+
+To run the age validation program, follow these steps:
+
+1. Open a terminal.
+2. Navigate to the directory containing the `conditions.py.py` file.
+3. Run the following command:
+
+   ```
+   python3 conditions.py
+   ```
+
+4. Enter your age when prompted.
+5. The program will check your eligibility to vote based on the provided age and print the result.
+
+Author
+Neville James
