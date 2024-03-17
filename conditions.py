@@ -4,8 +4,25 @@
 
 
 # Create a Python program that:
+def eligibilty(age):
+    # - Uses a conditional statement to check if the age is greater than or equal to 18.
+
+    if age >= 18:
+        return "You are eligible to vote"
+    else:
+        return "You are not eligible to vote"
 
 
 # - Prompts a user to enter their age.
-# - Uses a conditional statement to check if the age is greater than or equal to 18.
+age = int(input("Enter your age: "))
+
+# check if eligible
+checkEligibility = eligibilty(age)
+
 # - Prints "You are eligible to vote" if true, otherwise "You are not eligible to vote."
+print(checkEligibility)
+
+
+
+
+
