@@ -1,9 +1,32 @@
 # Python Conditional Statements 
-#example is https://plpacademy.powerlearnproject.org/course-module/62fbec9d28ac4762bc524f92/week/62fe1efd28ac4762bc524f9c/lesson/62fe1fbd28ac4762bc524f9f
+
+# Python program:
+
+# defined the main() function
+def main():
+    
+      # defines a variable voting_age to represent the minimum age for votin
+    voting_age = 18
+
+      #1 Prompt user to enter their age
+    age = int(input("Enter your age: "))
+
+      #Check if eligible to vote
+      #2 Uses a conditional statement to check if the age is greater than or equal to 18.
+    if age >= voting_age:
+         # If it is, the program prints a message indicating eligibility
+        print("You are eligible to vote.")
+    else:
+         # otherwise, it prints a message indicating ineligibility.
+        print("You are not eligible to vote.")
+  
+if __name__ == "__main__":
+    main()
+                # if __name__ == "__main__": checks if the script is being run as the main program. If true, it executes the block of code inside the if statement. If false, it means the script is being imported as a module, and the block of code is not executed.
 
 
 
-# Create a Python program that:
+
 
 
 # - Prompts a user to enter their age.
