@@ -1,11 +1,22 @@
-# Python Conditional Statements 
-#example is https://plpacademy.powerlearnproject.org/course-module/62fbec9d28ac4762bc524f92/week/62fe1efd28ac4762bc524f9c/lesson/62fe1fbd28ac4762bc524f9f
+# This function has the age question
+def question():
+    return int(input("\nHow old are you: "))
 
+#Checks for eligibility
+def check_age(age):
+    if age < 18:
+        print("You are not eligible to vote\n")
+    else:
+        print("You are eliglible to vote\n")
 
+# main function
+def main():
+    age = question()
+    if age < 0:
+        print("The age you entered is invalid")
+        question()
+    else:
+        check_age(age)
 
-# Create a Python program that:
-
-
-# - Prompts a user to enter their age.
-# - Uses a conditional statement to check if the age is greater than or equal to 18.
-# - Prints "You are eligible to vote" if true, otherwise "You are not eligible to vote."
+if __name__ == "__main__":
+    main()
