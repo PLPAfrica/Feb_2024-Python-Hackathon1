@@ -13,13 +13,18 @@ def fibonacci(n):
       A list containing the Fibonacci sequence up to n terms.
   """
   if n <= 1:
-    # Complete here
+# Base case: return a list with n if n is 0 or 1
+    return [n] 
   else:
-    a, b = # complete here
+# Initialize first two Fibonacci numbers
+    a, b = 0, 1
+    fibonacci_sequence = [a, b]
     for _ in range(2, n + 1):
       c = a + b
-      # Complete here
-    return # add the variable to be returned
+# Add the next number to the sequence and update variable 
+      fibonacci_sequence.append(c)
+      a, b = b, c
+    return fibonacci_sequence
 
 # Get the number of terms from the user
 num_terms = int(input("Enter the number of terms: "))
@@ -37,5 +42,4 @@ print(fibonacci_sequence)
 
 # Ask the user to input the value of n.
 # Create a function that takes n as a parameter and returns a list containing the first n terms of the Fibonacci sequence.
-# Print the generated Fibonacci sequence.
-
+# Print the generated Fibonacci sequence

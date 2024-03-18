@@ -23,5 +23,3 @@ if age >= 18:
 else:
     # Inform the user about ineligibility if age requirement is not met
     print(f"Sorry, {name}. You are not eligible to vote yet.")
-
-    
