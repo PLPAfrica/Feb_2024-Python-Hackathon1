@@ -6,7 +6,7 @@ def fibonacci(n):
       n: The number of terms in the Fibonacci sequence.
 
   Returns:
-      A list containing the Fibonacci sequence up to n terms.
+       A list containing the Fibonacci sequence up to n terms.
   """
   if n <= 1:
     # Complete here
