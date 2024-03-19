@@ -20,6 +20,18 @@ def fibonacci(n):
       c = a + b
       # Complete here
     return # add the variable to be returned
+    def generate_fibonacci(n):
+    fibonacci_sequence = [0, 1]  # Initialize Fibonacci sequence with first two terms
+    for i in range(2, n):
+        next_term = fibonacci_sequence[-1] + fibonacci_sequence[-2]  # Calculate next term
+        fibonacci_sequence.append(next_term)
+    return fibonacci_sequence[:n]  # Return first n terms of Fibonacci sequence
+
+# Ask the user to input the value of n
+n = int(input("Enter the value of n: "))
+
+# Call the function and print the generated Fibonacci sequence
+print("Generated Fibonacci sequence:", generate_fibonacci(n))
 
 # Get the number of terms from the user
 num_terms = int(input("Enter the number of terms: "))
