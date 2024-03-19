@@ -2,8 +2,14 @@
 #example is https://plpacademy.powerlearnproject.org/course-module/62fbec9d28ac4762bc524f92/week/62fe1efd28ac4762bc524f9c/lesson/62fe1fbd28ac4762bc524f9f
 
 
-
+age = int (input("Please Enter your age: "))
+if age > 18:
+  print("You are eligible to vote")
+elif age == 18:
+ print("You just turned 18,  you can vote")
 # Create a Python program that:
+else:
+  print("You are not eligible")
 
 
 # - Prompts a user to enter their age.
