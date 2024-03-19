@@ -14,12 +14,18 @@ def fibonacci(n):
   """
   if n <= 1:
     # Complete here
+    return n
   else:
-    a, b = # complete here
+    a, b = 0, 1  # complete here
+    fibonacci_sequence = [a, b]
     for _ in range(2, n + 1):
       c = a + b
+      a = b
+      b = c
+      fibonacci_sequence.append(c)
       # Complete here
-    return # add the variable to be returned
+    return fibonacci_sequence  # add the variable to be returned
+
 
 # Get the number of terms from the user
 num_terms = int(input("Enter the number of terms: "))
@@ -32,10 +38,8 @@ for i in range(num_terms):
 # Print the Fibonacci sequence
 print(fibonacci_sequence)
 
-
 # Your program should:
 
 # Ask the user to input the value of n.
 # Create a function that takes n as a parameter and returns a list containing the first n terms of the Fibonacci sequence.
 # Print the generated Fibonacci sequence.
-
