@@ -23,10 +23,10 @@ def fibonacci(n):
     return fibonacci_sequence
 
 # Get the number of terms from the user
-num_terms = int(input("Enter the number of terms: "))
+num_terms = int(input("Enter the number of terms for the Fibonacci sequence: "))
 
 # Generate the Fibonacci sequence
 fibonacci_sequence = fibonacci(num_terms)
 
 # Print the Fibonacci sequence
-print(fibonacci_sequence)
+print("Fibonacci sequence up to term", num_terms, ":", fibonacci_sequence)
