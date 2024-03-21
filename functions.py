@@ -1,32 +1,16 @@
-def fibonacci(n):
-    """
-    This function generates the Fibonacci sequence up to a specified term n using iteration.
-
-    Args:
-        n: The number of terms in the Fibonacci sequence.
-
-    Returns:
-        A list containing the Fibonacci sequence up to n terms.
-    """
-    fibonacci_sequence = [] 
+def generate_fibonacci(n):
     if n <= 0:
-        return fibonacci_sequence  
+        return []
     elif n == 1:
-        fibonacci_sequence.append(0)  
+        return [0]
+    elif n == 2:
+        return [0, 1]
     else:
-        fibonacci_sequence.extend([0, 1])  # If n is greater than 1, add the first two terms (0 and 1) to the sequence
-        a, b = 0, 1  
+        sequence = [0, 1]
         for _ in range(2, n):
-            c = a + b  
-            fibonacci_sequence.append(c)  
-            a, b = b, c  
-    return fibonacci_sequence
+            sequence.append(sequence[-1] + sequence[-2])
+        return sequence
 
-# Get the number of terms from the user
-num_terms = int(input("Enter the number of terms: "))
-
-# Generate the Fibonacci sequence
-fibonacci_sequence = fibonacci(num_terms)
-
-# Print the Fibonacci sequence
+n = int(input("Enter the number of terms: "))
+fibonacci_sequence = generate_fibonacci(n)
 print(fibonacci_sequence)
