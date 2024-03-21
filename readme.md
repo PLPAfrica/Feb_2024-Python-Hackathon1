@@ -12,7 +12,7 @@ Write a Python program to generate the Fibonacci sequence up to a specified term
 
 ## 2. Python Conditional Statements
 - I used while statement to iterate through the code untill the user chooses to exit the program
-- this is the output of how it is functioning
+
 
 
 #### Create a Python program that:
@@ -20,4 +20,6 @@ Write a Python program to generate the Fibonacci sequence up to a specified term
 - Prompts a user to enter their `age`.
 - Uses a conditional statement to check if the `age` is `greater than` or `equal to` 18.
 - Prints `You are eligible to vote` if true, otherwise `You are not eligible to vote`
+
 ![alt text](image-1.png)
+- This screenshot demonstrate the functionality of the source code
