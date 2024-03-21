@@ -1,4 +1,4 @@
-
+#Code to check wheteher a user is eligible to vote or not.
 while True:
     age = int(input("Enter your age or 0 to exit: "))
     name = input("Enter your name: ")
