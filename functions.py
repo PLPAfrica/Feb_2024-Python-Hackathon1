@@ -1,41 +1,27 @@
-# Functions & Fibonacci Sequence
-# Question
-# Write a Python program to generate the Fibonacci sequence up to a specified term n. The Fibonacci sequence starts with 0 and 1, and each subsequent term is the sum of the two preceding terms.
-#We have provided  you with in-complete code, from the Knowledge learned from week 1 to week 3 please complete the missing parts to achieve the goal of the question.
-def fibonacci(n):
-  """
-  This function generates the Fibonacci sequence up to a specified term n using iteration.
+def fibonacci (n, memo= {}):
+    if n in memo:
+      return memo[n]
 
-  Args:
-      n: The number of terms in the Fibonacci sequence.
+    if n <=1 :
+      return 1
+    memo[n] = fibonacci(n-1, memo) + fibonacci (n-2, memo)
+    return memo[n]
 
-  Returns:
-      A list containing the Fibonacci sequence up to n terms.
-  """
-  if n <= 1:
-    # Complete here
-  else:
-    a, b = # complete here
-    for _ in range(2, n + 1):
-      c = a + b
-      # Complete here
-    return # add the variable to be returned
+def fibonacci_sequence (n):
+   sequence = [fibonacci(i) for i in range (n)]
+   return sequence
 
-# Get the number of terms from the user
-num_terms = int(input("Enter the number of terms: "))
+def main():
+    try:
+        n = int(input("Enter the number of Fibonacci numbers to generate: "))
+        if n <= 0:
+            print("Please enter a positive integer.")
+            return
+        print(f"Fibonacci sequence: {fibonacci_sequence(n)}")
 
-# Generate the Fibonacci sequence
-fibonacci_sequence = []
-for i in range(num_terms):
-  fibonacci_sequence.append(fibonacci(i))
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
 
-# Print the Fibonacci sequence
-print(fibonacci_sequence)
-
-
-# Your program should:
-
-# Ask the user to input the value of n.
-# Create a function that takes n as a parameter and returns a list containing the first n terms of the Fibonacci sequence.
-# Print the generated Fibonacci sequence.
+if __name__ == "__main__":
+    main()
 
