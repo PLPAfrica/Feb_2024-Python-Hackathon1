@@ -11,6 +11,8 @@
 # - Prints "You are eligible to vote" if true, otherwise "You are not eligible to vote."
 
 
+age = int(input("Please enter your age: ")
+
 
 age = int(input("Enter your age: "))
 
@@ -19,3 +21,6 @@ if age >= 18:
     print("You are eligible to vote.")
 else:
     print("You are not eligible to vote.")
+
+    print("You are not eligible to vote.")
+
